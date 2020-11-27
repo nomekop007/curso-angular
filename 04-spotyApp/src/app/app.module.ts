@@ -9,7 +9,11 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http'
 
 //rutas
-import { ROUTES } from './app.routes'
+import { ROUTES } from './app.routes';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { ROUTES } from './app.routes'
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe,
+    TarjetasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, { useHash: true }),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
