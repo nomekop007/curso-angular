@@ -5,12 +5,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
+
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http'
 
+
+//pipe: https
+import { DomseguroPipe } from './pipes/domseguro.pipe'
+import { NoimagePipe } from './pipes/noimage.pipe';
+
+
 //rutas
 import { ROUTES } from './app.routes';
-import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
@@ -24,7 +30,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     NavbarComponent,
     NoimagePipe,
     TarjetasComponent,
-    LoadingComponent
+    LoadingComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,
